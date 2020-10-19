@@ -8,7 +8,7 @@ import re
 import logging
 
 import setuptools
-from setuptools import setup
+from cx_Freeze import setup, Executable
 from setuptools.command.install import install
 
 from pyglossary.core import VERSION
@@ -92,6 +92,18 @@ def files(folder):
 with open("README.md", "r", encoding="utf-8") as fh:
 	long_description = fh.read()
 
+# Dependencies are automatically detected, but it might need fine tuning.
+build_exe_options = {
+	"packages": ["os"],
+	"excludes": [],
+}
+
+# GUI applications require a different base on Windows (the default is for a
+# console application).
+base = None
+if sys.platform == "win32":
+    base = "Win32GUI"
+
 setup(
 	name="pyglossary",
 	version=VERSION,
@@ -133,4 +145,11 @@ setup(
 			"html5lib",
 		],
 	},
+	options={
+		"build_exe": build_exe_options,
+	},
+
+	# for this you need to install patchelf, otherwise fails with exception:
+	# ValueError: Cannot find required utility `patchelf` in PATH
+	# executables=[Executable("pyglossary.pyw", base=base)],
 )
