@@ -63,6 +63,11 @@ class UIBase(object):
 			comment="Cleanup cache or temporary files after conversion",
 			falseComment="Do not cleanup cache or temporary files after conversion",
 		)),
+		("resume", BoolOption(
+			hasFlag=True,
+			comment="resume conversion if possible",
+			falseComment="never resume conversion",
+		)),
 
 		("auto_sqlite", BoolOption(
 			hasFlag=False,

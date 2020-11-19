@@ -1,6 +1,7 @@
 {
 	"log_time": false,
 	"cleanup": true,
+	"resume": true,
 
 	"auto_sqlite": true,
 

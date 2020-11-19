@@ -295,6 +295,7 @@ class Glossary(GlossaryType):
 				self.setInfo(key, value)
 
 		self.ui = ui
+		self.resumeFrom = None
 
 	def cleanup(self):
 		if not self._cleanupPathList:
@@ -1334,6 +1335,18 @@ class Glossary(GlossaryType):
 		elif direct is None:
 			# if sort is in (False, None) ==> direct = True
 			direct = not sort
+
+		inputArgs = self.detectInputFormat(inputFilename, format=inputFormat)
+		if inputArgs is None:
+			return False
+
+		if (
+			self.getConfig("resume", False) and
+			getattr(self.plugins[inputArgs[1]].readerClass, "resumable", None) and
+			getattr(self.plugins[outputFormat].writerClass, "resumable", None)
+		):
+			from pyglossary.status import Status
+			self.resumeFrom = Status.load(inputFilename, outputFilename)
 
 		showMemoryUsage()
 
