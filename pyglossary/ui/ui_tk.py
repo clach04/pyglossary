@@ -1,4 +1,5 @@
-# -*- coding: utf-8 -*-
+# -*- coding: future_fstrings -*-
+# -*- coding: future_fstrings -*-
 # ui_tk.py
 #
 # Copyright © 2009-2020 Saeed Rasooli <saeed.gnu@gmail.com> (ilius)

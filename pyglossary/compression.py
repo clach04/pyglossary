@@ -1,4 +1,5 @@
-# -*- coding: utf-8 -*-
+# -*- coding: future_fstrings -*-
+# -*- coding: future_fstrings -*-
 
 stdCompressions = ("gz", "bz2", "lzma")
 

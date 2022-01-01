@@ -1,4 +1,5 @@
-# -*- coding: utf-8 -*-
+# -*- coding: future_fstrings -*-
+# -*- coding: future_fstrings -*-
 from formats_common import *
 from pyglossary.xml_utils import xml_escape
 from io import BytesIO

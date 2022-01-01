@@ -1,3 +1,4 @@
+# -*- coding: future_fstrings -*-
 from pickle import dumps, loads
 import os
 from os.path import isfile

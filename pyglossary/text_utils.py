@@ -1,4 +1,5 @@
-# -*- coding: utf-8 -*-
+# -*- coding: future_fstrings -*-
+# -*- coding: future_fstrings -*-
 # text_utils.py
 #
 # Copyright © 2008-2020 Saeed Rasooli <saeed.gnu@gmail.com> (ilius)

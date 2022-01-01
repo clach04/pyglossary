@@ -1,4 +1,5 @@
-# -*- coding: utf-8 -*-
+# -*- coding: future_fstrings -*-
+# -*- coding: future_fstrings -*-
 from formats_common import *
 
 enable = False

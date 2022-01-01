@@ -1,3 +1,4 @@
+# -*- coding: future_fstrings -*-
 from formats_common import *
 from hashlib import sha1
 from os.path import dirname

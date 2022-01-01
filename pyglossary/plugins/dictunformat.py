@@ -1,3 +1,4 @@
+# -*- coding: future_fstrings -*-
 from formats_common import *
 from pyglossary.text_reader import TextGlossaryReader
 
